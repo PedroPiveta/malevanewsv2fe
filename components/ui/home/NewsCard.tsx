@@ -6,7 +6,7 @@ import { Noticia } from "./NewsList";
 export function NewsCard({ noticia }: { noticia: Noticia }) {
 
   return <Link href={`/noticia/${noticia.id}`}>
-    <Card className="bg-primary text-primary-foreground">
+    <Card className="bg-card text-card-foreground">
       <CardHeader>
         <CardTitle>{noticia.title}
         </CardTitle>
