@@ -12,14 +12,13 @@ export interface Noticia {
 }
 
 
-export async function NewsList() {
-  const news = await getNews();
+export async function NewsList({ noticias }: { noticias: Noticia[] }) {
   return (
     <>
-    {news.map((noticia: Noticia) => (
+      {noticias.map((noticia: Noticia) => (
         <NewsCard key={noticia.id} noticia={noticia} />
       ))
-    }
+      }
     </>
   )
 }
